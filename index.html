@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez à quel superordinateur historique correspond la puissance de votre appareil.">
+    
+    <meta property="og:title" content="Time Compute - Voyageur Temporel">
+    <meta property="og:description" content="Mon téléphone est-il plus puissant que la NASA en 1969 ? Faites le test.">
+    <meta property="og:type" content="website">
+
+    <title>Time Compute | Analyse Temporelle</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="badge">V 2.0</div>
+            <h1>⏳ Time Compute</h1>
+            <p>Analyse de puissance & Voyage Historique</p>
+        </header>
+        
+        <section id="device-specs" class="device-info">
+            <div class="loading-text">Détection du matériel...</div>
+        </section>
+
+        <div class="action-area">
+            <button id="start-btn" onclick="runBenchmark()">Lancer le saut temporel</button>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Surcharge des processeurs en cours...</p>
+        </div>
+
+        <section id="result" class="hidden">
+            <div class="match-card">
+                <p class="intro-result">Votre appareil rivalise avec le maître du monde de l'année :</p>
+                <div class="year" id="match-year">----</div>
+                <div class="computer-name" id="match-name">----</div>
+                <p id="match-desc" class="desc">----</p>
+                
+                <div class="stats">
+                    <div class="stat-box">
+                        <span class="label">Votre Score</span>
+                        <span class="value" id="user-gflops">0</span>
+                        <span class="unit">GFLOPS</span>
+                    </div>
+                </div>
+            </div>
+            <button class="retry-btn" onclick="location.reload()">↺ Nouveau Test</button>
+        </section>
+
+        <footer>
+            <p>Données basées sur l'historique TOP500 & NASA.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
