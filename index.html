@@ -3,63 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez à quel superordinateur historique correspond la puissance de votre appareil.">
-    
-    <meta property="og:title" content="Time Compute - Voyageur Temporel">
-    <meta property="og:description" content="Mon téléphone est-il plus puissant que la NASA en 1969 ? Faites le test.">
-    <meta property="og:type" content="website">
-
-    <title>Time Compute | Analyse Temporelle</title>
-    
+    <title>Liste de courses vegan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+<div class="app">
+
+    <!-- STEP 1: Selection -->
+    <div id="step-select" class="step active">
         <header>
-            <div class="badge">V 2.0</div>
-            <h1>⏳ Time Compute</h1>
-            <p>Analyse de puissance & Voyage Historique</p>
+            <div class="leaf-icon">🌿</div>
+            <h1>Ma semaine vegan</h1>
+            <p>Choisissez vos repas de la semaine et obtenez votre liste de courses automatiquement</p>
         </header>
-        
-        <section id="device-specs" class="device-info">
-            <div class="loading-text">Détection du matériel...</div>
-        </section>
 
-        <div class="action-area">
-            <button id="start-btn" onclick="runBenchmark()">Lancer le saut temporel</button>
-        </div>
-        
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-            <p>Surcharge des processeurs en cours...</p>
-        </div>
-
-        <section id="result" class="hidden">
-            <div class="match-card">
-                <p class="intro-result">Votre appareil rivalise avec le maître du monde de l'année :</p>
-                <div class="year" id="match-year">----</div>
-                <div class="computer-name" id="match-name">----</div>
-                <p id="match-desc" class="desc">----</p>
-                
-                <div class="stats">
-                    <div class="stat-box">
-                        <span class="label">Votre Score</span>
-                        <span class="value" id="user-gflops">0</span>
-                        <span class="unit">GFLOPS</span>
-                    </div>
+        <div class="selectors">
+            <div class="selector-card">
+                <div class="selector-icon">🥗</div>
+                <div class="selector-label">Entrées</div>
+                <div class="counter">
+                    <button class="counter-btn" onclick="adjust('starters', -1)">−</button>
+                    <span class="counter-val" id="val-starters">2</span>
+                    <button class="counter-btn" onclick="adjust('starters', +1)">+</button>
                 </div>
             </div>
-            <button class="retry-btn" onclick="location.reload()">↺ Nouveau Test</button>
-        </section>
 
-        <footer>
-            <p>Données basées sur l'historique TOP500 & NASA.</p>
-        </footer>
+            <div class="selector-card">
+                <div class="selector-icon">🍲</div>
+                <div class="selector-label">Plats principaux</div>
+                <div class="counter">
+                    <button class="counter-btn" onclick="adjust('mains', -1)">−</button>
+                    <span class="counter-val" id="val-mains">5</span>
+                    <button class="counter-btn" onclick="adjust('mains', +1)">+</button>
+                </div>
+            </div>
+
+            <div class="selector-card">
+                <div class="selector-icon">🍰</div>
+                <div class="selector-label">Desserts</div>
+                <div class="counter">
+                    <button class="counter-btn" onclick="adjust('desserts', -1)">−</button>
+                    <span class="counter-val" id="val-desserts">2</span>
+                    <button class="counter-btn" onclick="adjust('desserts', +1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="cta-btn" onclick="generateMenu()">Générer mon menu 🛒</button>
+
+        <p class="source-note">Recettes inspirées de <a href="https://menu-vegetarien.com/recettes-vegan/" target="_blank">menu-vegetarien.com</a></p>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/1.0.35/ua-parser.min.js"></script>
+    <!-- STEP 2: Menu + Shopping list -->
+    <div id="step-result" class="step">
 
-    <script src="script.js"></script>
+        <div class="result-header">
+            <button class="back-btn" onclick="goBack()">← Modifier</button>
+            <h2>Mon menu de la semaine</h2>
+        </div>
+
+        <div id="menu-cards"></div>
+
+        <div class="shopping-section">
+            <h2>🛒 Liste de courses</h2>
+            <div class="shopping-actions">
+                <button class="action-btn" onclick="copyList()">📋 Copier</button>
+                <button class="action-btn" onclick="regenerate()">🔄 Nouveau menu</button>
+            </div>
+            <ul id="shopping-list"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
