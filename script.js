@@ -1,209 +1,232 @@
 // ─── RECIPE DATABASE ────────────────────────────────────────────────────────
-// Recipes inspired from menu-vegetarien.com/recettes-vegan/
+// Real recipes from menu-vegetarien.com/recettes-vegan/
 
 const RECIPES = {
     starters: [
         {
-            name: "Gaspacho concombre-raisin",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
+            name: "Houmous crémeux",
+            url: "https://menu-vegetarien.com/houmous-cremeux/",
+            ingredients: [
+                { item: "pois chiches cuits", qty: "400", unit: "g" },
+                { item: "tahini", qty: "3", unit: "c. à s." },
+                { item: "jus de citron", qty: "1", unit: "citron" },
+                { item: "ail", qty: "1", unit: "gousse" },
+                { item: "cumin en poudre", qty: "1", unit: "c. à c." },
+                { item: "huile d'olive", qty: "3", unit: "c. à s." },
+                { item: "bicarbonate de soude", qty: "1/2", unit: "c. à c." },
+                { item: "eau glacée", qty: "4", unit: "c. à s." },
+                { item: "sel", qty: "", unit: "" },
+            ]
+        },
+        {
+            name: "Gaspacho blanc et toasts de tomates",
+            url: "https://menu-vegetarien.com/gaspacho-blanc-toasts-tomates/",
             ingredients: [
                 { item: "concombre", qty: "2", unit: "" },
                 { item: "raisin blanc", qty: "200", unit: "g" },
                 { item: "pain de mie", qty: "2", unit: "tranches" },
-                { item: "huile d'olive", qty: "3", unit: "c. à s." },
+                { item: "tomates", qty: "2", unit: "" },
+                { item: "huile d'olive", qty: "4", unit: "c. à s." },
                 { item: "vinaigre de vin blanc", qty: "1", unit: "c. à s." },
                 { item: "ail", qty: "1", unit: "gousse" },
                 { item: "sel, poivre", qty: "", unit: "" },
             ]
         },
         {
-            name: "Houmous vert aux épinards",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
+            name: "Gaspacho vert",
+            url: "https://menu-vegetarien.com/gaspacho-vert/",
             ingredients: [
-                { item: "pois chiches (cuits)", qty: "400", unit: "g" },
-                { item: "épinards frais", qty: "100", unit: "g" },
-                { item: "tahini", qty: "2", unit: "c. à s." },
-                { item: "citron", qty: "1", unit: "" },
-                { item: "ail", qty: "2", unit: "gousses" },
-                { item: "huile d'olive", qty: "3", unit: "c. à s." },
-                { item: "cumin", qty: "1", unit: "c. à c." },
-                { item: "sel", qty: "", unit: "" },
-            ]
-        },
-        {
-            name: "Velouté patate douce-coco-curry",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "patate douce", qty: "500", unit: "g" },
-                { item: "lait de coco", qty: "200", unit: "ml" },
-                { item: "carotte", qty: "2", unit: "" },
-                { item: "bouillon de légumes", qty: "750", unit: "ml" },
-                { item: "curry en poudre", qty: "2", unit: "c. à c." },
-                { item: "gingembre frais", qty: "1", unit: "morceau" },
-                { item: "oignon", qty: "1", unit: "" },
-                { item: "huile d'olive", qty: "1", unit: "c. à s." },
-            ]
-        },
-        {
-            name: "Soupe chou-fleur et haricots blancs",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "chou-fleur", qty: "1/2", unit: "" },
-                { item: "haricots blancs (cuits)", qty: "400", unit: "g" },
-                { item: "pomme de terre", qty: "2", unit: "" },
-                { item: "ail", qty: "3", unit: "gousses" },
-                { item: "romarin", qty: "1", unit: "branche" },
-                { item: "bouillon de légumes", qty: "1", unit: "litre" },
-                { item: "croûtons", qty: "50", unit: "g" },
-                { item: "huile d'olive", qty: "2", unit: "c. à s." },
-            ]
-        },
-        {
-            name: "Tartare butternut-pomme-noisettes",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "butternut (petit)", qty: "1/4", unit: "" },
-                { item: "pomme", qty: "1", unit: "" },
-                { item: "noisettes", qty: "30", unit: "g" },
-                { item: "citron", qty: "1", unit: "" },
-                { item: "huile d'olive", qty: "2", unit: "c. à s." },
-                { item: "ciboulette", qty: "1", unit: "botte" },
-                { item: "sel, poivre", qty: "", unit: "" },
-            ]
-        },
-        {
-            name: "Salade kale vinaigrette miso",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "chou kale", qty: "200", unit: "g" },
-                { item: "jus d'orange", qty: "4", unit: "c. à s." },
-                { item: "miso blanc", qty: "1", unit: "c. à s." },
-                { item: "sirop d'agave", qty: "1", unit: "c. à c." },
-                { item: "graines de sésame", qty: "1", unit: "c. à s." },
-                { item: "huile de sésame", qty: "1", unit: "c. à c." },
-            ]
-        },
-        {
-            name: "Dips de lupin maison",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "lupins (bocal)", qty: "300", unit: "g" },
-                { item: "citron", qty: "1", unit: "" },
+                { item: "concombre", qty: "1", unit: "" },
+                { item: "courgette", qty: "1", unit: "" },
+                { item: "poivron vert", qty: "1", unit: "" },
+                { item: "avocat", qty: "1", unit: "" },
                 { item: "ail", qty: "1", unit: "gousse" },
-                { item: "huile d'olive", qty: "3", unit: "c. à s." },
-                { item: "paprika fumé", qty: "1", unit: "c. à c." },
+                { item: "jus de citron vert", qty: "1", unit: "citron" },
+                { item: "huile d'olive", qty: "2", unit: "c. à s." },
                 { item: "sel, poivre", qty: "", unit: "" },
             ]
         },
         {
-            name: "Brochettes antipasti",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
+            name: "Soupe Khao Soi",
+            url: "https://menu-vegetarien.com/soupe-khao-soi/",
             ingredients: [
-                { item: "tomates cerises", qty: "200", unit: "g" },
-                { item: "olives vertes et noires", qty: "100", unit: "g" },
-                { item: "artichauts marinés", qty: "150", unit: "g" },
-                { item: "poivrons grillés (bocal)", qty: "100", unit: "g" },
-                { item: "basilic frais", qty: "1", unit: "bouquet" },
+                { item: "nouilles de riz", qty: "200", unit: "g" },
+                { item: "lait de coco", qty: "400", unit: "ml" },
+                { item: "bouillon de légumes", qty: "500", unit: "ml" },
+                { item: "pâte Khao Soi (ou curry rouge)", qty: "2", unit: "c. à s." },
+                { item: "courge butternut", qty: "200", unit: "g" },
+                { item: "brocoli", qty: "150", unit: "g" },
+                { item: "pois mange-tout", qty: "100", unit: "g" },
+                { item: "sauce tamari", qty: "1", unit: "c. à s." },
+                { item: "jus de citron vert", qty: "1", unit: "citron" },
+                { item: "coriandre fraîche", qty: "1", unit: "bouquet" },
             ]
         },
-    ],
-
-    mains: [
         {
-            name: "Gnocchis champignons et fenouil",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
+            name: "Velouté de champignons",
+            url: "https://menu-vegetarien.com/veloute-de-champignons/",
             ingredients: [
-                { item: "gnocchis", qty: "500", unit: "g" },
-                { item: "champignons de Paris", qty: "300", unit: "g" },
-                { item: "fenouil", qty: "1", unit: "" },
-                { item: "crème d'avoine", qty: "200", unit: "ml" },
+                { item: "champignons de Paris", qty: "500", unit: "g" },
+                { item: "oignon", qty: "1", unit: "" },
                 { item: "ail", qty: "2", unit: "gousses" },
+                { item: "bouillon de légumes", qty: "750", unit: "ml" },
+                { item: "crème d'avoine", qty: "100", unit: "ml" },
                 { item: "thym", qty: "2", unit: "branches" },
                 { item: "huile d'olive", qty: "2", unit: "c. à s." },
                 { item: "sel, poivre", qty: "", unit: "" },
             ]
         },
         {
-            name: "Ramen tofu croustillant",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
+            name: "Soupe crémeuse à l'orge et champignons",
+            url: "https://menu-vegetarien.com/soupe-cremeuse-orge-champignons/",
             ingredients: [
-                { item: "nouilles ramen", qty: "200", unit: "g" },
-                { item: "tofu ferme", qty: "200", unit: "g" },
-                { item: "concombre", qty: "1", unit: "" },
-                { item: "sauce soja", qty: "3", unit: "c. à s." },
-                { item: "huile de sésame", qty: "1", unit: "c. à s." },
-                { item: "pâte de piment (gochujang)", qty: "1", unit: "c. à s." },
-                { item: "graines de sésame", qty: "1", unit: "c. à s." },
-                { item: "oignons verts", qty: "2", unit: "" },
-            ]
-        },
-        {
-            name: "Couscous perlé aubergines grillées",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "couscous perlé (fregola)", qty: "300", unit: "g" },
-                { item: "aubergine", qty: "2", unit: "" },
-                { item: "tomates cerises", qty: "250", unit: "g" },
-                { item: "pois chiches (cuits)", qty: "400", unit: "g" },
-                { item: "cumin", qty: "1", unit: "c. à c." },
-                { item: "coriandre moulue", qty: "1", unit: "c. à c." },
-                { item: "ras-el-hanout", qty: "1", unit: "c. à c." },
-                { item: "citron", qty: "1", unit: "" },
-                { item: "huile d'olive", qty: "3", unit: "c. à s." },
-            ]
-        },
-        {
-            name: "Paella végétale",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "riz à paella", qty: "300", unit: "g" },
-                { item: "poivron rouge", qty: "1", unit: "" },
-                { item: "poivron jaune", qty: "1", unit: "" },
-                { item: "courgette", qty: "1", unit: "" },
-                { item: "tomate", qty: "2", unit: "" },
-                { item: "petits pois", qty: "150", unit: "g" },
-                { item: "safran", qty: "1", unit: "pincée" },
-                { item: "paprika fumé", qty: "2", unit: "c. à c." },
-                { item: "bouillon de légumes", qty: "750", unit: "ml" },
-                { item: "huile d'olive", qty: "3", unit: "c. à s." },
-            ]
-        },
-        {
-            name: "Mijoté de seitan aux légumes d'hiver",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "seitan", qty: "300", unit: "g" },
-                { item: "pomme de terre", qty: "3", unit: "" },
-                { item: "carotte", qty: "3", unit: "" },
+                { item: "orge perlé", qty: "150", unit: "g" },
+                { item: "champignons de Paris", qty: "300", unit: "g" },
+                { item: "carotte", qty: "2", unit: "" },
                 { item: "oignon", qty: "1", unit: "" },
-                { item: "concentré de tomate", qty: "2", unit: "c. à s." },
-                { item: "bouillon de légumes", qty: "500", unit: "ml" },
-                { item: "thym, laurier", qty: "", unit: "" },
+                { item: "bouillon de légumes", qty: "1", unit: "litre" },
+                { item: "thym", qty: "2", unit: "branches" },
                 { item: "huile d'olive", qty: "2", unit: "c. à s." },
             ]
         },
         {
-            name: "Mafé de légumes au riz complet",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
+            name: "Soupe de courgettes et tomates",
+            url: "https://menu-vegetarien.com/soupe-courgettes-tomates/",
             ingredients: [
-                { item: "riz complet", qty: "300", unit: "g" },
-                { item: "patate douce", qty: "2", unit: "" },
-                { item: "chou blanc", qty: "200", unit: "g" },
-                { item: "tomate", qty: "2", unit: "" },
-                { item: "oignon", qty: "2", unit: "" },
-                { item: "purée de cacahuètes", qty: "100", unit: "g" },
-                { item: "bouillon de légumes", qty: "500", unit: "ml" },
-                { item: "piment", qty: "1", unit: "" },
+                { item: "courgette", qty: "3", unit: "" },
+                { item: "tomates", qty: "4", unit: "" },
+                { item: "oignon", qty: "1", unit: "" },
+                { item: "ail", qty: "2", unit: "gousses" },
+                { item: "bouillon de légumes", qty: "750", unit: "ml" },
+                { item: "basilic frais", qty: "1", unit: "bouquet" },
+                { item: "huile d'olive", qty: "2", unit: "c. à s." },
             ]
         },
         {
-            name: "Curry de lentilles aux épinards",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
+            name: "Salade de patates douces rôties",
+            url: "https://menu-vegetarien.com/salade-patates-douces-roties/",
+            ingredients: [
+                { item: "patate douce", qty: "2", unit: "" },
+                { item: "haricots rouges cuits", qty: "400", unit: "g" },
+                { item: "oignons verts", qty: "3", unit: "" },
+                { item: "poivron rouge", qty: "1", unit: "" },
+                { item: "maïs en boîte", qty: "200", unit: "g" },
+                { item: "persil frais", qty: "1", unit: "bouquet" },
+                { item: "huile d'olive", qty: "3", unit: "c. à s." },
+                { item: "vinaigre de cidre", qty: "1", unit: "c. à s." },
+            ]
+        },
+    ],
+
+    mains: [
+        {
+            name: "Curry de lentilles à la courge",
+            url: "https://menu-vegetarien.com/curry-lentilles-courge/",
+            ingredients: [
+                { item: "lentilles vertes sèches", qty: "250", unit: "g" },
+                { item: "courge butternut", qty: "400", unit: "g" },
+                { item: "chou-fleur", qty: "1/2", unit: "" },
+                { item: "oignon", qty: "1", unit: "" },
+                { item: "ail", qty: "3", unit: "gousses" },
+                { item: "lait de coco", qty: "400", unit: "ml" },
+                { item: "bouillon de légumes", qty: "500", unit: "ml" },
+                { item: "curry en poudre", qty: "2", unit: "c. à c." },
+                { item: "huile d'olive", qty: "2", unit: "c. à s." },
+            ]
+        },
+        {
+            name: "Curry de seitan",
+            url: "https://menu-vegetarien.com/curry-de-seitan/",
+            ingredients: [
+                { item: "seitan", qty: "300", unit: "g" },
+                { item: "oignon", qty: "1", unit: "" },
+                { item: "gingembre frais", qty: "1", unit: "morceau" },
+                { item: "tomates concassées (boîte)", qty: "400", unit: "g" },
+                { item: "concentré de tomates", qty: "1", unit: "c. à s." },
+                { item: "épices curry", qty: "2", unit: "c. à c." },
+                { item: "sucre de canne", qty: "1", unit: "c. à c." },
+                { item: "riz basmati", qty: "250", unit: "g" },
+                { item: "huile de tournesol", qty: "2", unit: "c. à s." },
+            ]
+        },
+        {
+            name: "Curry vert au tofu",
+            url: "https://menu-vegetarien.com/curry-vert-tofu/",
+            ingredients: [
+                { item: "tofu ferme", qty: "300", unit: "g" },
+                { item: "brocoli", qty: "1", unit: "" },
+                { item: "patate douce", qty: "2", unit: "" },
+                { item: "pâte de curry vert", qty: "2", unit: "c. à s." },
+                { item: "lait de coco", qty: "400", unit: "ml" },
+                { item: "riz", qty: "250", unit: "g" },
+                { item: "sauce soja", qty: "1", unit: "c. à s." },
+                { item: "huile de coco", qty: "1", unit: "c. à s." },
+            ]
+        },
+        {
+            name: "Curry vert à la thaï",
+            url: "https://menu-vegetarien.com/curry-vert-thai/",
+            ingredients: [
+                { item: "nouilles ramen", qty: "200", unit: "g" },
+                { item: "pâte de curry vert", qty: "2", unit: "c. à s." },
+                { item: "lait de coco", qty: "400", unit: "ml" },
+                { item: "bouillon de légumes", qty: "300", unit: "ml" },
+                { item: "légumes de saison (courgette, poivron)", qty: "300", unit: "g" },
+                { item: "tofu fumé", qty: "200", unit: "g" },
+                { item: "sauce soja", qty: "2", unit: "c. à s." },
+                { item: "citron vert", qty: "1", unit: "" },
+                { item: "coriandre fraîche", qty: "1", unit: "bouquet" },
+            ]
+        },
+        {
+            name: "Gnocchis aux petits pois, épinards et pesto",
+            url: "https://menu-vegetarien.com/gnocchis-petits-pois-epinards-pesto/",
+            ingredients: [
+                { item: "gnocchis", qty: "500", unit: "g" },
+                { item: "petits pois", qty: "200", unit: "g" },
+                { item: "épinards frais", qty: "150", unit: "g" },
+                { item: "pesto vegan", qty: "3", unit: "c. à s." },
+                { item: "crème d'avoine", qty: "100", unit: "ml" },
+                { item: "ail", qty: "1", unit: "gousse" },
+                { item: "huile d'olive", qty: "1", unit: "c. à s." },
+            ]
+        },
+        {
+            name: "Spaghettis crémeux champignons et poireaux",
+            url: "https://menu-vegetarien.com/spaghettis-cremeux-champignons-poireaux/",
+            ingredients: [
+                { item: "spaghettis", qty: "350", unit: "g" },
+                { item: "champignons de Paris", qty: "300", unit: "g" },
+                { item: "poireaux", qty: "2", unit: "" },
+                { item: "crème d'avoine", qty: "200", unit: "ml" },
+                { item: "ail", qty: "2", unit: "gousses" },
+                { item: "levure maltée", qty: "2", unit: "c. à s." },
+                { item: "thym", qty: "1", unit: "c. à c." },
+                { item: "huile d'olive", qty: "2", unit: "c. à s." },
+            ]
+        },
+        {
+            name: "One Pot Pasta aux aubergines",
+            url: "https://menu-vegetarien.com/one-pot-pasta-aubergines/",
+            ingredients: [
+                { item: "orecchiette (pâtes)", qty: "350", unit: "g" },
+                { item: "aubergine", qty: "1", unit: "" },
+                { item: "champignons de Paris", qty: "200", unit: "g" },
+                { item: "tomates concassées (boîte)", qty: "400", unit: "g" },
+                { item: "bouillon de légumes", qty: "500", unit: "ml" },
+                { item: "ail", qty: "2", unit: "gousses" },
+                { item: "basilic frais", qty: "1", unit: "bouquet" },
+                { item: "huile d'olive", qty: "3", unit: "c. à s." },
+            ]
+        },
+        {
+            name: "Dahl de lentilles corail à la courge",
+            url: "https://menu-vegetarien.com/dahl-lntilles-corail-courge/",
             ingredients: [
                 { item: "lentilles corail", qty: "250", unit: "g" },
-                { item: "épinards frais", qty: "200", unit: "g" },
+                { item: "courge butternut", qty: "400", unit: "g" },
                 { item: "lait de coco", qty: "400", unit: "ml" },
-                { item: "tomate concassée (boîte)", qty: "400", unit: "g" },
+                { item: "tomates concassées (boîte)", qty: "400", unit: "g" },
                 { item: "oignon", qty: "1", unit: "" },
                 { item: "ail", qty: "3", unit: "gousses" },
                 { item: "gingembre frais", qty: "1", unit: "morceau" },
@@ -211,26 +234,12 @@ const RECIPES = {
                 { item: "riz basmati", qty: "250", unit: "g" },
             ]
         },
-        {
-            name: "Pâtes aux champignons et noix",
-            url: "https://menu-vegetarien.com/recettes-vegan/",
-            ingredients: [
-                { item: "pâtes (penne ou tagliatelles)", qty: "350", unit: "g" },
-                { item: "champignons de Paris", qty: "400", unit: "g" },
-                { item: "noix", qty: "60", unit: "g" },
-                { item: "crème d'avoine", qty: "200", unit: "ml" },
-                { item: "ail", qty: "2", unit: "gousses" },
-                { item: "levure maltée", qty: "2", unit: "c. à s." },
-                { item: "persil frais", qty: "1", unit: "bouquet" },
-                { item: "huile d'olive", qty: "2", unit: "c. à s." },
-            ]
-        },
     ],
 
     desserts: [
         {
-            name: "Cake myrtilles vegan",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
+            name: "Cake vegan aux myrtilles",
+            url: "https://menu-vegetarien.com/cake-vegan-myrtilles/",
             ingredients: [
                 { item: "farine T65", qty: "200", unit: "g" },
                 { item: "sucre de canne", qty: "120", unit: "g" },
@@ -238,12 +247,23 @@ const RECIPES = {
                 { item: "lait d'avoine", qty: "200", unit: "ml" },
                 { item: "huile de tournesol", qty: "80", unit: "ml" },
                 { item: "levure chimique", qty: "1", unit: "sachet" },
-                { item: "vanille", qty: "1", unit: "c. à c." },
+                { item: "vanille en poudre", qty: "1", unit: "c. à c." },
             ]
         },
         {
-            name: "Madeleines à la pâte à tartiner",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
+            name: "Crêpes vegan",
+            url: "https://menu-vegetarien.com/crepes-vegan/",
+            ingredients: [
+                { item: "farine T65", qty: "250", unit: "g" },
+                { item: "lait d'avoine", qty: "500", unit: "ml" },
+                { item: "huile de tournesol", qty: "2", unit: "c. à s." },
+                { item: "sucre de canne", qty: "2", unit: "c. à s." },
+                { item: "vanille en poudre", qty: "1", unit: "c. à c." },
+            ]
+        },
+        {
+            name: "Madeleines vegan fourrées",
+            url: "https://menu-vegetarien.com/madeleines-vegan/",
             ingredients: [
                 { item: "farine T65", qty: "150", unit: "g" },
                 { item: "sucre de canne", qty: "80", unit: "g" },
@@ -254,41 +274,8 @@ const RECIPES = {
             ]
         },
         {
-            name: "Crêpes vegan légères",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
-            ingredients: [
-                { item: "farine T65", qty: "250", unit: "g" },
-                { item: "lait d'avoine", qty: "500", unit: "ml" },
-                { item: "huile de tournesol", qty: "2", unit: "c. à s." },
-                { item: "sucre de canne", qty: "2", unit: "c. à s." },
-                { item: "vanille", qty: "1", unit: "c. à c." },
-            ]
-        },
-        {
-            name: "Verrines mangue-citron vert et perles",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
-            ingredients: [
-                { item: "perles du Japon (tapioca)", qty: "100", unit: "g" },
-                { item: "mangue", qty: "2", unit: "" },
-                { item: "citron vert", qty: "2", unit: "" },
-                { item: "lait de coco", qty: "400", unit: "ml" },
-                { item: "sirop d'agave", qty: "2", unit: "c. à s." },
-                { item: "menthe fraîche", qty: "1", unit: "bouquet" },
-            ]
-        },
-        {
-            name: "Mousse au chocolat à l'aquafaba",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
-            ingredients: [
-                { item: "chocolat noir (70%)", qty: "200", unit: "g" },
-                { item: "aquafaba (eau de pois chiches)", qty: "150", unit: "ml" },
-                { item: "sucre de canne", qty: "60", unit: "g" },
-                { item: "vanille", qty: "1", unit: "c. à c." },
-            ]
-        },
-        {
             name: "Financier vegan à la poire",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
+            url: "https://menu-vegetarien.com/financier-vegan-poire/",
             ingredients: [
                 { item: "poudre d'amandes", qty: "100", unit: "g" },
                 { item: "farine T65", qty: "80", unit: "g" },
@@ -300,28 +287,48 @@ const RECIPES = {
             ]
         },
         {
-            name: "Gâteau fondant au chocolat",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
+            name: "Mousse au chocolat vegan",
+            url: "https://menu-vegetarien.com/mousse-chocolat-vegan/",
+            ingredients: [
+                { item: "chocolat noir (70%)", qty: "200", unit: "g" },
+                { item: "aquafaba (eau de pois chiches)", qty: "160", unit: "ml" },
+            ]
+        },
+        {
+            name: "Tarte tatin vegan",
+            url: "https://menu-vegetarien.com/tarte-tatin-vegan/",
+            ingredients: [
+                { item: "pomme", qty: "6", unit: "" },
+                { item: "pâte feuilletée vegan", qty: "1", unit: "rouleau" },
+                { item: "margarine vegan", qty: "50", unit: "g" },
+                { item: "sucre de canne", qty: "80", unit: "g" },
+                { item: "sucre vanillé", qty: "1", unit: "sachet" },
+                { item: "jus de citron", qty: "1", unit: "c. à s." },
+            ]
+        },
+        {
+            name: "Verrine perles du Japon, coco, mangue et lime",
+            url: "https://menu-vegetarien.com/verrine-perles-japon-coco-mangue/",
+            ingredients: [
+                { item: "perles du Japon (tapioca)", qty: "100", unit: "g" },
+                { item: "lait de coco", qty: "400", unit: "ml" },
+                { item: "mangue", qty: "2", unit: "" },
+                { item: "citron vert", qty: "2", unit: "" },
+                { item: "sirop d'agave", qty: "2", unit: "c. à s." },
+                { item: "menthe fraîche", qty: "1", unit: "bouquet" },
+            ]
+        },
+        {
+            name: "Moelleux au chocolat vegan",
+            url: "https://menu-vegetarien.com/moelleux-chocolat-vegan/",
             ingredients: [
                 { item: "chocolat noir (70%)", qty: "200", unit: "g" },
                 { item: "farine T65", qty: "80", unit: "g" },
                 { item: "sucre de canne", qty: "100", unit: "g" },
                 { item: "lait d'avoine", qty: "150", unit: "ml" },
                 { item: "huile de tournesol", qty: "80", unit: "ml" },
-                { item: "cacao amer", qty: "2", unit: "c. à s." },
                 { item: "levure chimique", qty: "1", unit: "sachet" },
-            ]
-        },
-        {
-            name: "Tarte tatin revisitée",
-            url: "https://menu-vegetarien.com/recettes-vegan/desserts-recettes-vegan/",
-            ingredients: [
-                { item: "pomme", qty: "6", unit: "" },
-                { item: "pâte feuilletée vegan", qty: "1", unit: "rouleau" },
-                { item: "margarine vegan", qty: "50", unit: "g" },
-                { item: "sucre de canne", qty: "80", unit: "g" },
-                { item: "sauce soja", qty: "1", unit: "c. à s." },
-                { item: "cannelle", qty: "1", unit: "c. à c." },
+                { item: "cacao amer", qty: "2", unit: "c. à s." },
             ]
         },
     ]
@@ -346,26 +353,22 @@ function pickRandom(arr, n) {
 
 // ─── SHOPPING LIST BUILDER ─────────────────────────────────────────────────
 function buildShoppingList(recipes) {
-    const map = new Map(); // item name (lowercase) → { item, qty, unit, count }
+    const map = new Map();
 
     for (const recipe of recipes) {
         for (const ing of recipe.ingredients) {
             if (!ing.item) continue;
             const key = ing.item.toLowerCase();
             if (!map.has(key)) {
-                map.set(key, { item: ing.item, qty: ing.qty, unit: ing.unit, count: 1 });
+                map.set(key, { item: ing.item, qty: ing.qty, unit: ing.unit });
             } else {
                 const existing = map.get(key);
-                // Try to sum numeric quantities with same unit
                 const existNum = parseFloat(existing.qty);
                 const newNum = parseFloat(ing.qty);
                 if (!isNaN(existNum) && !isNaN(newNum) && existing.unit === ing.unit) {
                     existing.qty = String(existNum + newNum);
-                } else {
-                    existing.count++;
-                    if (ing.qty && ing.qty !== existing.qty) {
-                        existing.qty = `${existing.qty} + ${ing.qty}`;
-                    }
+                } else if (ing.qty && ing.qty !== existing.qty) {
+                    existing.qty = `${existing.qty} + ${ing.qty}`;
                 }
             }
         }
@@ -407,13 +410,14 @@ function renderResult() {
             allRecipes.push(recipe);
             html += `
                 <div class="recipe-card">
-                    <div class="recipe-name">${recipe.name}</div>
+                    <div class="recipe-name">
+                        <a class="recipe-link" href="${recipe.url}" target="_blank" rel="noopener">${recipe.name} ↗</a>
+                    </div>
                     <ul class="ing-list">
                         ${recipe.ingredients.map(i =>
                             `<li>${i.qty ? `<span class="qty">${i.qty} ${i.unit}</span>` : ''} ${i.item}</li>`
                         ).join('')}
                     </ul>
-                    <a class="recipe-link" href="${recipe.url}" target="_blank">Voir la recette →</a>
                 </div>
             `;
         }
@@ -430,7 +434,6 @@ function renderResult() {
     }).join('');
     document.getElementById('shopping-list').innerHTML = listHtml;
 
-    // Toggle checkboxes
     document.querySelectorAll('#shopping-list li').forEach(li => {
         li.addEventListener('click', () => li.classList.toggle('checked'));
     });
@@ -450,11 +453,7 @@ function regenerate() {
 
 function copyList() {
     const items = document.querySelectorAll('#shopping-list li');
-    const text = [...items].map(li => {
-        const qty = li.querySelector('.sl-qty');
-        const name = li.textContent.replace('☐', '').trim();
-        return `• ${name}`;
-    }).join('\n');
+    const text = [...items].map(li => `• ${li.textContent.replace('☐', '').trim()}`).join('\n');
 
     navigator.clipboard.writeText(text).then(() => {
         const btn = document.querySelector('.action-btn');
